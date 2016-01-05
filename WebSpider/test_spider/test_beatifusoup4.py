@@ -28,4 +28,5 @@ link1 = soup.find('a',href='http://example.com/tillie')
 print link1.name, link1['href'], link1.get_text();
 
 print(u'正则匹配')
-link2 = soup.find('a', href=re.compile(r'''\w+'''))
+link2 = soup.find('a', href=re.compile(r'''\w+\lie'''))
+print link2.name, link2['href'], link2.get_text()
