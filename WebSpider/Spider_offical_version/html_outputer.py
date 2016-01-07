@@ -16,7 +16,7 @@ class HtmlOutputer(object):
         fout.write("<body>")
         fout.write("<table>")
 
-        #迭代输出数据
+        #迭代输出数据11111
         for data in self.datas:
             fout.write("<tr>")
             fout.write("<td>%s</td" %data['url'].encode('utf-8'))
