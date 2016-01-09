@@ -2,15 +2,16 @@
 import urlparse
 from bs4 import BeautifulSoup
 import re
-
-
+# 解析下载的网页content
 class HtmlParser(object):
     def __init__(self):
         pass
+    #解析主函数
     def parse(self, new_url, html_content):
         if new_url is None or html_content is None:
             return
         else:
+            # 申明soup
             soup = BeautifulSoup(html_content, 'html.parser',from_encoding='utf-8' )
             new_urls = self.get_new_urls(new_url, soup)
             new_datas = self.get_new_datas(new_url, soup)

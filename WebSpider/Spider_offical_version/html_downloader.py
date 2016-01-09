@@ -1,7 +1,7 @@
 #coding:utf8
 import urllib2
 
-
+# 下载URL类
 class HtmlDownloader(object):
     def download(self, new_url):
         if new_url is None:

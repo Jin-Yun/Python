@@ -1,14 +1,17 @@
 #coding:utf8
+# 输出类
 class HtmlOutputer(object):
     def __init__(self):
         self.datas = []
 
+    # 将有效数据加入到datas【】中
     def collect_data(self, new_datas):
         if new_datas is None:
             return
         else:
             self.datas.append(new_datas)
 
+    # 迭代输出data[]中的所有数据，注意encoding格式
     def output_html(self):
         fout = open('output.html', 'w')
 
